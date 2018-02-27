@@ -2,39 +2,73 @@
 <html>
 <head>
 <title>gimblll</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <style type="text/css">
 
 body {
-	font-size: 14px;
-	font-family: "Verdana", "Geneva", sans-serif;
-	color: #888888;
-	background-color:#1e1e1e;
+	font-size: 12px;
+	font-family: "Inconsolata", "Verdana", "Geneva", sans-serif;
+	color: #777777;
+	background-color:#ffffff;
 	text-align: center;
-	margin: 30px;
+	margin: 20px;
 }
 #customdiv {
-	padding:10px 0px;
+	padding:2px 0px;
 	margin:auto; 
-	width:800px;
+	width:600px;
 	height:auto;
-	background-color:#0e0e0e;
+	background-color:#eeeeee;
 }
 #introdiv {
 	margin:auto; 
-	width:700px;
+	width:500px;
 	height:auto;
 }
 #topicdiv {
-	padding:0px 10px;
+	padding:0px 0px;
 	margin:auto; 
-	width:700px;
+	width:500px;
 	height:auto;
 }
 #infodiv {
 	padding:10px 10px;
 	margin:auto; 
-	width:700px;
+	width:500px;
 	height:auto;
+}
+
+#projectdiv {
+	padding:12px 12px;
+	margin:10px 29px; 
+	height:auto;
+	overflow:auto;
+	background-color:#e5e5e5;
+}
+#projectdiv:hover {
+   outline:1px solid white;
+}
+
+#projectpheading {
+	padding:0px 2px;
+	margin-top:0px;
+	margin-bottom:10px;
+	text-align:left;
+}
+
+#projectp {
+	padding:0px 3px;
+	margin:auto; 
+	text-align:left;
+}
+
+#projectimg {
+	padding:0px 3px;
+	float:right;
+}
+
+canvas {
+	display : inline;
 }
 
 li {
@@ -44,31 +78,29 @@ li {
 }
 
 a:link 				{ color:#FB8851; }  /* unvisited link */
-a:visited 			{ color:#AF5F3A; }  /* visited link */
-a:link:hover 		{ color:#FFFFFF; }  /* mouse over link */
-a:link:active 		{ color:#FFFFFF; }  /* selected link */ 
-a:visited:hover 	{ color:#FFFFFF; }  /* mouse over link */
-a:visited:active 	{ color:#FFFFFF; }  /* selected link */ 
+a:visited 			{ color:#FB8851; }  /* visited link */
+a:link:hover 		{ color:#000000; }  /* mouse over link */
+a:link:active 		{ color:#000000; }  /* selected link */ 
+a:visited:hover 	{ color:#000000; }  /* mouse over link */
+a:visited:active 	{ color:#000000; }  /* selected link */ 
 
 </style>
 </head>
 
 <body>
-
-	<div id="customdiv">
-        <canvas id="canvas" width="800" height="200"></canvas>
-		<script src="logo.js"></script>
-	</div>
 	<div id="customdiv"></div>
 	<div id="customdiv">
+        <canvas id="canvas" width="600" height="150"></canvas>
+		<script src="logo.js"></script>
+	</div>
+	<div id="customdiv">
 		<div id="introdiv">
-			<p>Hello, I'm Kimmo Lahtinen 
+			<p>Hello there, I'm Kimmo Lahtinen 
 			(<a href="mailto:gimblll@gmail.com">Email</a> / 
-			<a href="https://fi.linkedin.com/in/kimmo-lahtinen-908612111">LinkedIn</a> / 
 			<a href="https://twitter.com/gimblll">Twitter</a> / 
-			<a href="https://www.instagram.com/gimblll/">Instagram</a>).
-			I'm a computer programmer by education, but dabble in all kinds of creative weirdness.
-			Working on my own independent games currently.</p>
+			<a href="https://fi.linkedin.com/in/kimmo-lahtinen-908612111">LinkedIn</a>).
+			I'm a creator of games, programmer by trade and an artist at heart. This is my portfolio website
+		where I've gathered a sampling of things I've worked on.</p>
 		</div>
 	</div>
 	<div id="customdiv">-</div>
@@ -78,70 +110,305 @@ a:visited:active 	{ color:#FFFFFF; }  /* selected link */
 	<div id="customdiv">-</div>
 	<div id="customdiv">
 		<div id="topicdiv">
-			<h1><a id="indie">Personal Projects</a></h1>
+			<h2><a id="indie">Personal Projects</a></h2>
 		</div>
 		<div id="infodiv">
-			A selection of personal projects I've done over the years.
+			A selection of personal projects done over the years. All work by me, unless otherwise stated.
 		</div>
 
-		<p>Barbearian (working title) (Windows / iOS, coming late 2017)</p>
-		<img src="http://i.imgur.com/Y91ko6h.jpg" alt="Smilers screenshot" width="560"> </img>
+		<div id="projectdiv">
+			<img id = "projectimg" src="http://i.imgur.com/Y91ko6h.jpg" align="right" width="160"> </img>
+			<p id="projectpheading">
+				<a href="http://www.barbearian.com">Barbearian</a> (coming summer 2018)
+				(Windows / iOS)
+			</p>
+			<p id="projectp">
+				A hack'n'slash with massive battles in an isometric colorful world.
+			</p>
+			<br/>
+			<p id="projectp">Music by <a href="https://www.facebook.com/Tommy-Baynen-325801535849/">Tommi Lahtinen</a></p>
+			</p>
+		</div>
 
-		<p><a href="http://www.trigonarium.com">Trigonarium</a> (<a href="http://store.steampowered.com/app/394030">Windows</a> / <a href="https://itunes.apple.com/us/app/trigonarium/id973810507">iOS & AppleTV</a>, 2015) (Music: Tommi Lahtinen)</p>
-		<iframe src="//player.vimeo.com/video/123831779" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/mvcrqRW.png" align="right" width="160"> </img>
+			<p id="projectpheading">
+				<a href="http://www.trigonarium.com">Trigonarium</a> (2015)
+				(<a href="http://player.vimeo.com/video/123831779">Trailer</a> /
+				<a href="http://store.steampowered.com/app/394030">Windows</a> / <a href="https://itunes.apple.com/us/app/trigonarium/id973810507">iOS & AppleTV</a>)
+			</p>
 
-		<p><a href="http://www.driftndrive.com">Drift'n'Drive</a> (<a href="https://itunes.apple.com/app/driftndrive/id900003063">iOS</a>, 2014) (Music: Tommi Lahtinen)</p>
-		<iframe src="//player.vimeo.com/video/109690970" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<p id="projectp">
+				A hardcore twin-stick shooter for fans of challenging arcade gaming. 
+			</p>
+			
+			<br/>
+			<p id="projectp">Music by <a href="https://www.facebook.com/Tommy-Baynen-325801535849/">Tommi Lahtinen</a></p>
+			<br/>
+		</div>
 
-		<p>NX 647 (iPad, 2014) (Music: Tommi Lahtinen)</p>
-		<iframe src="//player.vimeo.com/video/88877790" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/vyLTjQp.jpg" align="right" height="140"> </img>
+			<p id="projectpheading">
+				<a href="http://www.driftndrive.com">Drift'n'Drive</a> (2014)
+				(<a href="http://player.vimeo.com/video/109690970">Trailer</a> /
+				<a href="https://itunes.apple.com/app/driftndrive/id900003063">iOS</a>)
+			</p>
 
-		<p>Sphaeracore (<a href="http://vimeo.com/85078767">video</a>, 2014)</p>
-		<iframe src="//player.vimeo.com/video/85078767" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<p id="projectp">
+				A vertically scrolling top-down racing game with plenty of challenge and replayability. 
+			</p>
+			
+			<br/>
+			<p id="projectp">Music by <a href="https://www.facebook.com/Tommy-Baynen-325801535849/">Tommi Lahtinen</a></p>
+			<br/>
+		</div>
 
-		<p>Cosmic Mechanic (<a href="https://itunes.apple.com/app/id606118389">iPad</a>, 2013) (Sound: Tommi Lahtinen)</p>
-		<iframe src="//player.vimeo.com/video/88338785" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-		<p>Puzzle Bonsai (<a href="https://itunes.apple.com/app/id491318778">iOS</a> / <a href="http://www.kongregate.com/games/gimblll/puzzle-bonsai-numbers">Flash</a>, 2012) (Sound: Tommi Lahtinen)</p>
-		<iframe width="560" height="315" src="//www.youtube.com/embed/EiUVoHqnMYg" frameborder="0" allowfullscreen></iframe>
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/uQsqnGN.png" align="right" width="160"> </img>
+			<p id="projectpheading">
+				NX 647 (2014)
+				(<a href="http://player.vimeo.com/video/88877790">Trailer</a> /
+				iPad - not available currently)
+			</p>
 
-		<p>Pvt. Littledude vs Robot Armada (<a href="http://www.kongregate.com/games/gimblll/pvt-littledude-vs-robot-armada">Flash</a>, 2011) (Sound: Tommi Lahtinen)</p>
-		<iframe width="560" height="315" src="//www.youtube.com/embed/BEK1tZlXILE" frameborder="0" allowfullscreen></iframe>
+			<p id="projectp">
+				A particle based 3D game played by tapping the spawning geometric shapes.
+			</p>
+			
+			<br/>
+			<p id="projectp">Music by <a href="https://www.facebook.com/Tommy-Baynen-325801535849/">Tommi Lahtinen</a></p>
+			<br/>
+		</div>
 
-		<p>Fitting Pieces (<a href="http://www.kongregate.com/games/gimblll/fitting-pieces">Flash</a>, 2009) (Sound: Tommi Lahtinen)</p>
-		<iframe width="560" height="315" src="//www.youtube.com/embed/pnpME3AXG5U" frameborder="0" allowfullscreen></iframe>
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/ACx6D4w.jpg" align="right" width="160"> </img>
+			<p id="projectpheading">
+				Sphaeracore (2014)
+				(<a href="http://player.vimeo.com/video/85078767">Video</a>)
+			</p>
 
-		<p>Smilers (Windows, 1999) (Art: Pekka Palmu, Sound: Tommi Lahtinen)</p>
-		<img src="screenshot_smilers_1.png" alt="Smilers screenshot" width="560"> </img>
+			<p id="projectp">
+				An imagined futuristic sales presentation done as an After Effect learning exercise.
+			</p>
+		</div>
+
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/moU961B.png" align="right" height="140"> </img>
+			<p id="projectpheading">
+				Cosmic Mechanic (2013)
+				(<a href="http://player.vimeo.com/video/88338785">Trailer</a> /
+				<a href="https://itunes.apple.com/app/driftndrive/id606118389">iPad</a>)
+			</p>
+
+			<p id="projectp">
+				A physics game about building vehicles and driving them through difficult landscapes.
+			</p>
+			
+			<br/>
+			<p id="projectp">Music and sfx by <a href="https://www.facebook.com/Tommy-Baynen-325801535849/">Tommi Lahtinen</a></p>
+			<br/>
+		</div>
+
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/gMVogCN.jpg" align="right" height="140"> </img>
+			<p id="projectpheading">
+				Puzzle Bonsai (2012)
+				(<a href="http://www.youtube.com/watch?v=EiUVoHqnMYg">Trailer</a> /
+				<a href="https://itunes.apple.com/app/driftndrive/id491318778">iOS</a> / Flash)
+			</p>
+
+			<p id="projectp">
+				A puzzle game where you try to figure out the equation tree combining to the wanted end result.
+			</p>
+			
+			<br/>
+			<p id="projectp">Music and sfx by <a href="https://www.facebook.com/Tommy-Baynen-325801535849/">Tommi Lahtinen</a></p>
+			<br/>
+		</div>
+
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/16WNvbL.png" align="right" height="140"> </img>
+			<p id="projectpheading">
+				Pvt. Littledude vs Robot Armada (2011)
+				(<a href="http://www.youtube.com/watch?v=BEK1tZlXILE">Trailer</a> /
+				<a href="http://www.kongregate.com/games/gimblll/pvt-littledude-vs-robot-armada">Flash</a>)
+			</p>
+
+			<p id="projectp">
+				A shoot'em up where you try to defeat waves of evil robots with random weapons.
+			</p>
+			
+			<br/>
+			<p id="projectp">Music and sfx by <a href="https://www.facebook.com/Tommy-Baynen-325801535849/">Tommi Lahtinen</a></p>
+			<br/>
+		</div>
+
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/gHEkV4g.png" align="right" height="140"> </img>
+			<p id="projectpheading">
+				Fitting Pieces (2009)
+				(<a href="http://www.youtube.com/watch?v=pnpME3AXG5U">Trailer</a> /
+				<a href="http://www.kongregate.com/games/gimblll/fitting-pieces">Flash</a>)
+			</p>
+
+			<p id="projectp">
+				A puzzle game about fitting a set of Tetris-like blocks into the given shape.
+			</p>
+			
+			<br/>
+			<p id="projectp">Music and sfx by <a href="https://www.facebook.com/Tommy-Baynen-325801535849/">Tommi Lahtinen</a></p>
+			<br/>
+		</div>
+
+		<div id="projectdiv">
+			<img id = "projectimg" src="screenshot_smilers_1.png" align="right" height="140"> </img>
+			<p id="projectpheading">
+				Smilers (1999)
+				(Windows - not available currently)
+			</p>
+
+			<p id="projectp">
+				A two player co-op game based on Boulder Dash
+			</p>
+			
+			<br/>
+			<p id="projectp">
+				Art by Pekka Palmu<br/>
+				Music and sfx by <a href="https://www.facebook.com/Tommy-Baynen-325801535849/">Tommi Lahtinen</a></p>
+			<br/>
+		</div>
+
+
+
+
 	</div>
 	<div id="customdiv">
 		<div id="topicdiv">
 			<h1><a id="pro">Professional Work</a></h1>
 		</div>
 		<div id="infodiv">
-			I worked for <a href="http://en.wikipedia.org/wiki/Housemarque">Housemarque</a> from 2001 to 2014 as a programmer in many different roles. During my time there I have been involved in pretty much everything, from engine and tool work to gameplay and special FX. Here's a sampling of a few of the titles I worked on.
+			I worked for <a href="http://en.wikipedia.org/wiki/Housemarque">Housemarque</a> from 2001 to 2014 as a programmer in many different roles. During my time there I have been involved in pretty much everything, from engine and tool work to gameplay and special FX.
 		</div>
 
-		<p>Resogun (PS4, 2013)</p>
-		<iframe width="560" height="315" src="//www.youtube.com/embed/709wLa2SMhU" frameborder="0" allowfullscreen></iframe>
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/shwJ9RM.jpg" align="right" height="140"> </img>
+			<p id="projectpheading">
+				Resogun (2013) 
+				(<a href="http://www.youtube.com/watch?v=709wLa2SMhU">Trailer</a> /
+				PS4)
+			</p>
 
-		<p>Outland (Xbox 360 & PS3, 2011)</p>
-		<iframe width="560" height="315" src="//www.youtube.com/embed/TUwaE3pg6aQ" frameborder="0" allowfullscreen></iframe>
+			<p id="projectp">
+				A vertically scrolling twin stick shooter played on a cylinder, in the form of old time classics like Defender.
+			</p>
+			<br/>
+			<p id="projectp">
+				Worked on "hero" particle effects, voxel systems, tools, optimization, etc.
+			</p>
+			
+		</div>
 
-		<p>Dead Nation (PS3, 2010)</p>
-		<iframe width="560" height="315" src="//www.youtube.com/embed/giY0hnJpqzY" frameborder="0" allowfullscreen></iframe>
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/zfRYsZ0.jpg" align="right" height="140"> </img>
+			<p id="projectpheading">
+				Outland (2011) 
+				(<a href="http://www.youtube.com/watch?v=TUwaE3pg6aQ">Trailer</a> / PS3 / Xbox 360)
+			</p>
 
-		<p>Super Stardust Portable (PSP, 2008)</p>
-		<iframe width="560" height="315" src="//www.youtube.com/embed/qjyVKnnpqZ8" frameborder="0" allowfullscreen></iframe>
+			<p id="projectp">
+				A metroidvania platformer with Ikaruga style bullet avoidance and beautiful hand drawn graphics.
+			</p>
+			<br/>
+			<p id="projectp">
+				Worked as lead programmer.
+			</p>
+			
+		</div>
 
-		<p>Golf: Tee it Up (Xbox 360, 2008)</p>
-		<iframe width="560" height="315" src="//www.youtube.com/embed/l7b_y__fz5I" frameborder="0" allowfullscreen></iframe>
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/0W7XgMe.png" align="right" height="140"> </img>
+			<p id="projectpheading">
+				Dead Nation (2010) 
+				(<a href="http://www.youtube.com/watch?v=giY0hnJpqzY">Trailer</a> / PS3)
+			</p>
 
-		<p>Trader (PS2, prototype, ~2004)</p>
-		<iframe width="560" height="315" src="//www.youtube.com/embed/AxFR5aABB7o" frameborder="0" allowfullscreen></iframe>
+			<p id="projectp">
+				A zombie shooter from a top down viewpoint.
+			</p>
+			<br/>
+			<p id="projectp">
+				Worked on tools, physics, menus, camera, etc.
+			</p>
+			
+		</div>
 
-		<p>Furry Dragons (Xbox, prototype, ~2002)</p>
-		<iframe width="560" height="315" src="//www.youtube.com/embed/aySNTHBDdNY" frameborder="0" allowfullscreen></iframe>
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/gwJZcRw.png" align="right" height="140"> </img>
+			<p id="projectpheading">
+				Super Stardust Portable (2008) 
+				(<a href="http://www.youtube.com/watch?v=qjyVKnnpqZ8">Trailer</a> / PSP)
+			</p>
+
+			<p id="projectp">
+				A PSP version of Super Stardust PS3.
+			</p>
+			<br/>
+			<p id="projectp">
+				Worked as lead programmer.
+			</p>
+			
+		</div>
+
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/tKgKOMk.png" align="right" height="140"> </img>
+			<p id="projectpheading">
+				Golf: Tee it Up (2008) 
+				(<a href="http://www.youtube.com/watch?v=l7b_y__fz5I">Trailer</a> / Xbox 360)
+			</p>
+
+			<p id="projectp">
+				An arcade Golf game with customizable characters and online gameplay support.
+			</p>
+			<br/>
+			<p id="projectp">
+				Worked on engine, menus, networking, gameplay etc.
+			</p>
+			
+		</div>
+
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/LDHGZb5.png" align="right" height="140"> </img>
+			<p id="projectpheading">
+				Trader (prototype) (~2004) 
+				(<a href="http://www.youtube.com/watch?v=AxFR5aABB7o">Prototype footage</a> / PS2)
+			</p>
+
+			<p id="projectp">
+				A PS2 prototype that never got a publisher
+			</p>
+			<br/>
+			<p id="projectp">
+				Worked on gameplay, physics, tools, etc.
+			</p>
+		</div>
+
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://i.imgur.com/dZNG3Ss.png" align="right" height="140"> </img>
+			<p id="projectpheading">
+				Furry Dragons (prototype) (~2002) 
+				(<a href="http://www.youtube.com/watch?v=aySNTHBDdNY">Prototype footage</a> / Xbox)
+			</p>
+
+			<p id="projectp">
+				An Xbox prototype that never got a publisher
+			</p>
+			<br/>
+			<p id="projectp">
+				Worked on gameplay, tools, etc.
+			</p>
+		</div>
 
 	</div>
 	<div id="customdiv">
@@ -149,7 +416,7 @@ a:visited:active 	{ color:#FFFFFF; }  /* selected link */
 			<h1><a id="jam">Game Jams</a></h1>
 		</div>
 		<div id="infodiv">
-			Various games I have done for the <a href="http://www.ludumdare.com/compo/">Ludum Dare</a> 48h game jam.
+			Various games I have finished for the <a href="http://www.ludumdare.com/compo/">Ludum Dare</a> 48h game jam.
 		</div>
 		<ul>
 			<li>MiniLD #28 - <a href="http://www.ludumdare.com/compo/minild-28/?action=preview&uid=78">Pvt.Littledude vs Robot Armada</a></li>
@@ -161,6 +428,6 @@ a:visited:active 	{ color:#FFFFFF; }  /* selected link */
 		</ul>
 	</div>
 
-	<div id="customdiv"></div>
+	<div id="customdiv">-</div>
 </body>
 </html>

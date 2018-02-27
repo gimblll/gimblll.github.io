@@ -17,17 +17,17 @@ canvas.addEventListener('mousemove', track_mouse, false);
 // Logo "art"
 var items = 
 [
-	"                                 ",
-	"                                 ",
-	"  xxxx x x   x xxx  x   x   x    ",
-	"  x    x xx xx x  x x   x   x    ",
-	"  x xx x x x x xxx  x   x   x    ",
-	"  x  x x x   x x  x x   x   x    ",
-	"  xxxx x x   x xxx  xxx xxx xxx  ",
-	"                                 ",
+	"xxxx x x   x xxx  x   x   x  ",
+	"x    x xx xx x  x x   x   x  ",
+	"x xx x x x x xxx  x   x   x  ",
+	"x  x x x   x x  x x   x   x  ",
+	"xxxx x x   x xxx  xxx xxx xxx",
 ];
 
-const square_size = 24;
+const square_size = 16;
+const brightness = 110;
+const full_text_w = items[0].length * square_size;
+const full_text_h = items.length * square_size;
 
 // Generate one block sprite
 var block_bm_id = context.createImageData(square_size, square_size);
@@ -35,12 +35,9 @@ var pixel_array = block_bm_id.data;
 
 for (var i = 0; i < square_size*square_size*4; i += 4)
 {
-//	pixel_array[i + 0] = 251;
-//	pixel_array[i + 1] = 136;
-//	pixel_array[i + 2] = 81;
-	pixel_array[i + 0] = 110;
-	pixel_array[i + 1] = 110;
-	pixel_array[i + 2] = 110;
+	pixel_array[i + 0] = brightness;
+	pixel_array[i + 1] = brightness;
+	pixel_array[i + 2] = brightness;
 	pixel_array[i + 3] = 255;
 }
 
@@ -121,6 +118,29 @@ for (var i = 0; i < order.length; ++i)
 
 var loop_time = 0;
 
+const anim_time_in = 0.7;
+const anim_block_interval = 0.01;
+const anim_speed = 3.0;
+const anim_strength = 6.0;
+const anim_x_distance = 10;
+
+function sign(val)
+{
+	return val >= 0 ? 1 : -1;
+}
+
+function lerp(from, to, amount)
+{
+	return from + (to - from) * amount;
+}
+
+function clamp(val, min, max)
+{
+	if (val < min) return min;
+	if (val > max) return max;
+	return val;
+}
+
 // Animation loop
 var loop_game = function(delta_t)
 {
@@ -129,29 +149,24 @@ var loop_game = function(delta_t)
 	
 	loop_time += delta_t;
 	
-//	const x_offset_centered = 4; // + Math.sin(loop_time) * 10;
-	const x_offset_centered = 4 + Math.sin(loop_time) * 10;
-	
+	const x_offset_centered = (canvas.width - full_text_w) * 0.5 + Math.sin(loop_time) * anim_x_distance;
+	const y_offset_centered = (canvas.height - full_text_h) * 0.5;
+
 	// Draw the rectangles
 	for (var i = 0; i < target_location.length; ++i)   
 	{
 		// Slide the rectangles into their places
-		var target_delay = order[i] * 0.03;
+		var target_delay = order[i] * anim_block_interval;
+		var phase_linear = loop_time > target_delay ? clamp((loop_time - target_delay) / anim_time_in, 0.0, 1.0) : 0.0;
+		var phase = phase_linear * phase_linear * phase_linear;
 		
-		if (loop_time > target_delay)
-		{
-			offset[i][0] *= 0.9;
-			offset[i][1] *= 0.9;
-		}
-		
-		// Current rectangle target position
-		var x_offset = offset[i][0] + x_offset_centered;
-		var y_offset = offset[i][1];
+		var x_offset = (1.0 - phase) * offset[i][0] + x_offset_centered;
+		var y_offset = (1.0 - phase) * offset[i][1] + y_offset_centered;
 		
 		var x = target_location[i][0] + x_offset;
 		var y = target_location[i][1] + y_offset;
 
-		y += Math.cos(x * 0.01 + loop_time * 3.0) * 5.0;
+		y += Math.cos(x * 0.01 + loop_time * anim_speed) * anim_strength;
 
 		// Warp the position based on mouse
 		if (mouse_x >= 0)
