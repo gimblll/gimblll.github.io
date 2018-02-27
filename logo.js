@@ -25,7 +25,6 @@ var items =
 ];
 
 const square_size = 16;
-const brightness = 110;
 const full_text_w = items[0].length * square_size;
 const full_text_h = items.length * square_size;
 
@@ -35,9 +34,9 @@ var pixel_array = block_bm_id.data;
 
 for (var i = 0; i < square_size*square_size*4; i += 4)
 {
-	pixel_array[i + 0] = brightness;
-	pixel_array[i + 1] = brightness;
-	pixel_array[i + 2] = brightness;
+	pixel_array[i + 0] = 110;
+	pixel_array[i + 1] = 110;
+	pixel_array[i + 2] = 110;
 	pixel_array[i + 3] = 255;
 }
 

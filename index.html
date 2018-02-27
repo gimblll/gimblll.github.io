@@ -8,25 +8,27 @@
 body {
 	font-size: 12px;
 	font-family: "Inconsolata", "Verdana", "Geneva", sans-serif;
-	color: #777777;
-	background-color:#ffffff;
+/*	color: #777777;
+	background-color:#ffffff; */
+	color: #888888;
+	background-color:#1e1e1e;
 	text-align: center;
 	margin: 20px;
+
+	background-image:url("website_bg.png");
+    background-repeat: repeat-y;
+    background-position: center top;
+    background-attachment: fixed;
 }
 #customdiv {
 	padding:2px 0px;
 	margin:auto; 
 	width:600px;
 	height:auto;
-	background-color:#eeeeee;
+/*	background-color:#eeeeee; */
+	background-color:#111111;
 }
 #introdiv {
-	margin:auto; 
-	width:500px;
-	height:auto;
-}
-#topicdiv {
-	padding:0px 0px;
 	margin:auto; 
 	width:500px;
 	height:auto;
@@ -43,17 +45,22 @@ body {
 	margin:10px 29px; 
 	height:auto;
 	overflow:auto;
-	background-color:#e5e5e5;
+/*	background-color:#e5e5e5; */
+	background-color:#252525; 
 }
+/*
 #projectdiv:hover {
-   outline:1px solid white;
+   outline:1px solid black;
+	background-color:#353535; 
 }
+*/
 
 #projectpheading {
 	padding:0px 2px;
 	margin-top:0px;
 	margin-bottom:10px;
 	text-align:left;
+	color: #bbbbbb;
 }
 
 #projectp {
@@ -66,6 +73,12 @@ body {
 	padding:0px 3px;
 	float:right;
 }
+/*
+#projectimg:hover {
+	width:300;
+	height:auto;
+}
+*/
 
 canvas {
 	display : inline;
@@ -77,12 +90,12 @@ li {
 	margin: 0px 100px;
 }
 
-a:link 				{ color:#FB8851; }  /* unvisited link */
-a:visited 			{ color:#FB8851; }  /* visited link */
-a:link:hover 		{ color:#000000; }  /* mouse over link */
-a:link:active 		{ color:#000000; }  /* selected link */ 
-a:visited:hover 	{ color:#000000; }  /* mouse over link */
-a:visited:active 	{ color:#000000; }  /* selected link */ 
+a:link 				{ color:#FB8851; }
+a:visited 			{ color:#FB8851; }
+a:link:hover 		{ color:#ffffff; background-color:#777777; }
+a:link:active 		{ color:#ffffff; background-color:#777777; }
+a:visited:hover 	{ color:#ffffff; background-color:#777777; }
+a:visited:active 	{ color:#ffffff; background-color:#777777; }
 
 </style>
 </head>
@@ -99,8 +112,9 @@ a:visited:active 	{ color:#000000; }  /* selected link */
 			(<a href="mailto:gimblll@gmail.com">Email</a> / 
 			<a href="https://twitter.com/gimblll">Twitter</a> / 
 			<a href="https://fi.linkedin.com/in/kimmo-lahtinen-908612111">LinkedIn</a>).
-			I'm a creator of games, programmer by trade and an artist at heart. This is my portfolio website
-		where I've gathered a sampling of things I've worked on.</p>
+			I'm a creator of games, programmer by trade and an artist at heart. I'm currently working
+			as an independent game developer. This is my portfolio website
+		where I've gathered a sampling of my work.</p>
 		</div>
 	</div>
 	<div id="customdiv">-</div>
@@ -109,9 +123,7 @@ a:visited:active 	{ color:#000000; }  /* selected link */
 	</div>
 	<div id="customdiv">-</div>
 	<div id="customdiv">
-		<div id="topicdiv">
-			<h2><a id="indie">Personal Projects</a></h2>
-		</div>
+		<h2><a id="indie">Personal Projects</a></h2>
 		<div id="infodiv">
 			A selection of personal projects done over the years. All work by me, unless otherwise stated.
 		</div>
@@ -123,11 +135,24 @@ a:visited:active 	{ color:#000000; }  /* selected link */
 				(Windows / iOS)
 			</p>
 			<p id="projectp">
-				A hack'n'slash with massive battles in an isometric colorful world.
+				A multiyear project to make a fast paced hack'n'slash with massive battles in an isometric colorful world.
 			</p>
 			<br/>
 			<p id="projectp">Music by <a href="https://www.facebook.com/Tommy-Baynen-325801535849/">Tommi Lahtinen</a></p>
 			</p>
+		</div>
+
+		<div id="projectdiv">
+			<img id = "projectimg" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/fabd4562576433.5a94fcff5f58b.png" align="right" width="160"> </img>
+			<p id="projectpheading">
+				Voxel Cities (2017)
+				(<a href="https://www.behance.net/gimblll5a87">Images</a>)
+			</p>
+
+			<p id="projectp">
+				A neverending project doing voxel art with custom generators whenever inspiration strikes.
+			</p>
+		
 		</div>
 
 		<div id="projectdiv">
@@ -156,7 +181,7 @@ a:visited:active 	{ color:#000000; }  /* selected link */
 			</p>
 
 			<p id="projectp">
-				A vertically scrolling top-down racing game with plenty of challenge and replayability. 
+				A vertically scrolling top-down racing game with heaps of challenge and replayability. 
 			</p>
 			
 			<br/>
@@ -174,7 +199,7 @@ a:visited:active 	{ color:#000000; }  /* selected link */
 			</p>
 
 			<p id="projectp">
-				A particle based 3D game played by tapping the spawning geometric shapes.
+				A particle based 3D game with simple touch control gameplay.
 			</p>
 			
 			<br/>
@@ -220,7 +245,7 @@ a:visited:active 	{ color:#000000; }  /* selected link */
 			</p>
 
 			<p id="projectp">
-				A puzzle game where you try to figure out the equation tree combining to the wanted end result.
+				A puzzle game where you try to figure out the equation tree that would combine to the wanted end result.
 			</p>
 			
 			<br/>
@@ -237,7 +262,7 @@ a:visited:active 	{ color:#000000; }  /* selected link */
 			</p>
 
 			<p id="projectp">
-				A shoot'em up where you try to defeat waves of evil robots with random weapons.
+				A shoot'em up where you try to defeat waves of evil robots with random weapon pickups.
 			</p>
 			
 			<br/>
@@ -285,11 +310,9 @@ a:visited:active 	{ color:#000000; }  /* selected link */
 
 	</div>
 	<div id="customdiv">
-		<div id="topicdiv">
-			<h1><a id="pro">Professional Work</a></h1>
-		</div>
+		<h1><a id="pro">Professional Work</a></h1>
 		<div id="infodiv">
-			I worked for <a href="http://en.wikipedia.org/wiki/Housemarque">Housemarque</a> from 2001 to 2014 as a programmer in many different roles. During my time there I have been involved in pretty much everything, from engine and tool work to gameplay and special FX.
+			I worked for <a href="http://en.wikipedia.org/wiki/Housemarque">Housemarque</a> from 2001 to 2014. During my time there I was involved in many various roles from engine and tool work to gameplay and design. Selection of the more interesting works follows.
 		</div>
 
 		<div id="projectdiv">
@@ -335,7 +358,7 @@ a:visited:active 	{ color:#000000; }  /* selected link */
 			</p>
 
 			<p id="projectp">
-				A zombie shooter from a top down viewpoint.
+				A twin stick zombie shooter from a top down viewpoint.
 			</p>
 			<br/>
 			<p id="projectp">
@@ -369,7 +392,7 @@ a:visited:active 	{ color:#000000; }  /* selected link */
 			</p>
 
 			<p id="projectp">
-				An arcade Golf game with customizable characters and online gameplay support.
+				An arcade golf game with customizable characters and online gameplay modes.
 			</p>
 			<br/>
 			<p id="projectp">
@@ -412,9 +435,7 @@ a:visited:active 	{ color:#000000; }  /* selected link */
 
 	</div>
 	<div id="customdiv">
-		<div id="topicdiv">
-			<h1><a id="jam">Game Jams</a></h1>
-		</div>
+		<h1><a id="jam">Game Jams</a></h1>
 		<div id="infodiv">
 			Various games I have finished for the <a href="http://www.ludumdare.com/compo/">Ludum Dare</a> 48h game jam.
 		</div>
@@ -428,6 +449,6 @@ a:visited:active 	{ color:#000000; }  /* selected link */
 		</ul>
 	</div>
 
-	<div id="customdiv">-</div>
+	<div id="customdiv"> <br/></div>
 </body>
 </html>
