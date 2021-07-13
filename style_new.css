@@ -1,0 +1,67 @@
+
+body {
+	font-size: 14px;
+	font-family: "Raleway", "Verdana", "Geneva", sans-serif;
+	background-color:#ffffff;
+	color: #888888;
+	text-align: center;
+	margin: 50px;
+
+/*	background-image:url("website_bg.png");
+    background-repeat: repeat-y;
+    background-position: center top;
+    */
+/*    background-attachment: fixed;*/
+}
+
+/*
+.projectdiv:hover {
+   outline:1px solid black;
+	background-color:#353535; 
+}
+*/
+
+.gbl-title {
+	font-family: "Roboto Light", "Verdana", "Geneva", sans-serif;
+	font-size: 24px;
+}
+
+.gbl-title-menu {
+	font-family: "Roboto Light", "Verdana", "Geneva", sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+
+.gbl-title-icon {
+	font-size: 16px;
+	color: lightgray;
+	/*padding: 18px;*/
+}
+
+.project-card {
+	margin: 12px;
+}
+
+.project-image {
+}
+
+.project-title {
+	font-family: "Raleway", "Verdana", "Geneva", sans-serif;
+	font-size: 18px;
+}
+
+.project-desc {
+	font-family: "Roboto Light", "Verdana", "Geneva", sans-serif;
+	font-size: 14px;
+}
+
+.projectp {
+	padding:6px;
+}
+
+a:link 				{ color:#FB8851; }
+a:visited 			{ color:#FB8851; }
+a:link:hover 		{ color:#FB8851; background-color:#eeeeee; }
+a:link:active 		{ color:#FB8851; background-color:#eeeeee; }
+a:visited:hover 	{ color:#FB8851; background-color:#eeeeee; }
+a:visited:active 	{ color:#FB8851; background-color:#eeeeee; }
