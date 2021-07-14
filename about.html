@@ -21,16 +21,82 @@
 	<!-- Bootstrap Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-	<!-- Our own helpers -->
-	<script src="common.js"></script>
+	<div class="container-xxl pt-5">
+	  <div class="row">
+	 	  <p class="col gbl-title">Kimmo Lahtinen / gimblll</p>
+   	</div>
 
-	<!-- Create the menu bar -->
-	<script>create_header();</script>
+	  <div class="row justify-content-center px-5 pb-2">
+  	 	<div class="col-4 col-lg-2 col-sm-3 gbl-title-menu">WORK</div>
+  	 	<div class="col-4 col-lg-2 col-sm-3 gbl-title-menu"><a href='adsf'>ABOUT</a></div>
+  	 	<div class="col-4 col-lg-2 col-sm-3 gbl-title-menu">
+			  <div class="row justify-content-center">
+		  	 	<div class="col-2"><a href="mailto:gimblll@gmail.com"><i class="bi-envelope gbl-title-icon"></i></a></div>
+		  	 	<div class="col-2"><a href="https://twitter.com/gimblll"><i class="bi-twitter gbl-title-icon"></i></a></div>
+		  	 	<div class="col-2"><a href="https://fi.linkedin.com/in/kimmo-lahtinen-908612111"><i class="bi-linkedin gbl-title-icon"></i></a></div>
+		 	 	</div>
+   		</div>
+  	</div>
+  </div>
+
+<script>
+
+function create_node(parent, type, class_name) 
+{
+  var x = document.createElement(type);
+  if (class_name)
+	  x.className = class_name;
+  parent.appendChild(x);
+  return x;
+}
+
+function create_text(parent, text, url)
+{
+	var link_text = document.createTextNode(text);
+	if (url)
+	{
+		var link = create_node(parent, "a", "");
+		link.href = url;
+		link.appendChild(link_text);
+	}
+	else
+		parent.appendChild(link_text);
+}
+
+function create_card(project_title, gif_id, project_url, year, platforms_html, description_html)
+{
+	var root = document.getElementById("card_container_indie");
+
+	// Create the entry
+	var card = create_node(root, "div", "col-sm-6 col-lg-4");
+
+	// Add title image
+	var img = create_node(card, "img", "img-fluid");
+	img.src = gif_id;
+
+	// Texts
+	var project = create_node(card, "div", "project-card");
+	var title = create_node(project, "div", "project-title");
+
+	create_text(title, project_title, project_url);
+
+	if (year)
+	{
+		create_text(title, " (" + year + ")");
+	}
+
+	var platform_root = create_node(project, "p", "project-desc");
+	platform_root.innerHTML = platforms_html;
+
+	var desc_root = create_node(project, "p", "project-desc");
+	desc_root.innerHTML = description_html; 
+}
+
+</script> 
 
 
 <div class="container-xxl">
 <hr>
-
   <div id="card_container_indie" class="row g-2">
 
   	<script>
@@ -117,11 +183,12 @@
   	</script>
 
   </div>
-
 <hr>
 </div>
 
-<script>create_footer();</script>
+
+<a href="#" class="back-to-top align-items-center justify-content-center">Back to the top!</a>
+<p/>
 
 </body>
 </html>
