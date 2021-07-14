@@ -21,174 +21,18 @@
 	<!-- Bootstrap Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-	<div class="container-xxl pt-5">
-	  <div class="row">
-	 	  <p class="col gbl-title">Kimmo Lahtinen / gimblll</p>
-   	</div>
+	<!-- Our own helpers -->
+	<script src="common.js"></script>
 
-	  <div class="row justify-content-center px-5 pb-2">
-  	 	<div class="col-4 col-lg-2 col-sm-3 gbl-title-menu">WORK</div>
-  	 	<div class="col-4 col-lg-2 col-sm-3 gbl-title-menu"><a href='adsf'>ABOUT</a></div>
-  	 	<div class="col-4 col-lg-2 col-sm-3 gbl-title-menu">
-			  <div class="row justify-content-center">
-		  	 	<div class="col-2"><a href="mailto:gimblll@gmail.com"><i class="bi-envelope gbl-title-icon"></i></a></div>
-		  	 	<div class="col-2"><a href="https://twitter.com/gimblll"><i class="bi-twitter gbl-title-icon"></i></a></div>
-		  	 	<div class="col-2"><a href="https://fi.linkedin.com/in/kimmo-lahtinen-908612111"><i class="bi-linkedin gbl-title-icon"></i></a></div>
-		 	 	</div>
-   		</div>
-  	</div>
-  </div>
-
-<script>
-
-function create_node(parent, type, class_name) 
-{
-  var x = document.createElement(type);
-  if (class_name)
-	  x.className = class_name;
-  parent.appendChild(x);
-  return x;
-}
-
-function create_text(parent, text, url)
-{
-	var link_text = document.createTextNode(text);
-	if (url)
-	{
-		var link = create_node(parent, "a", "");
-		link.href = url;
-		link.appendChild(link_text);
-	}
-	else
-		parent.appendChild(link_text);
-}
-
-function create_card(project_title, gif_id, project_url, year, platforms_html, description_html)
-{
-	var root = document.getElementById("card_container_indie");
-
-	// Create the entry
-	var card = create_node(root, "div", "col-sm-6 col-lg-4");
-
-	// Add title image
-	var img = create_node(card, "img", "img-fluid");
-	img.src = gif_id;
-
-	// Texts
-	var project = create_node(card, "div", "project-card");
-	var title = create_node(project, "div", "project-title");
-
-	create_text(title, project_title, project_url);
-
-	if (year)
-	{
-		create_text(title, " (" + year + ")");
-	}
-
-	var platform_root = create_node(project, "p", "project-desc");
-	platform_root.innerHTML = platforms_html;
-
-	var desc_root = create_node(project, "p", "project-desc");
-	desc_root.innerHTML = description_html; 
-}
-
-</script> 
+	<!-- Create the menu bar -->
+	<script>create_header(1);</script>
 
 
-<div class="container-xxl">
-<hr>
-  <div id="card_container_indie" class="row g-2">
-
-  	<script>
-  			create_card(
-  				"Day Repeat Day", 
-  				"gifs/drd_card.gif", 
-  				"http://www.gimblll.com/dayrepeatday", 
-  				"2021",
-  				"Windows, iOS",
-  				"Day Repeat Day is a story based match-3 game about life, work and the meaning of it all.");
-
-  			create_card(
-  				"Barbearian", 
-  				"gifs/barbearian_card.gif", 
-  				"http://www.gimblll.com/barbearian", 
-  				"2018",
-  				"Switch, Windows, iOS, Apple TV",
-  				"Barbearian is fast paced hack'n'slash with massive battles that draws inspiration from classics of arcade gaming.");
-
-  			create_card(
-  				"Art Portfolio", 
-  				"gifs/art_card.gif", 
-  				"https://www.deviantart.com/gimblll", 
-  				"",
-  				"",
-  				"Drawings, voxel art, etc.");
-
-  			create_card(
-  				"Trigonarium", 
-  				"gifs/trigo_card.gif", 
-  				"http://www.gimblll.com/trigonarium", 
-  				"2015",
-  				"Windows, iOS, Apple TV",
-  				"Trigonarium is a minimalistic hardcore twin-stick shooter.");
-
-  			create_card(
-  				"Drift'n'Drive", 
-  				"gifs/dnd_card.gif", 
-  				"http://www.gimblll.com/driftndrive", 
-  				"2014",
-  				"iOS",
-  				"Drift'n'Drive is a vertically scrolling top-down racing game with a lot of challenge and replayability.");
-
-  			create_card(
-  				"Housemarque", 
-  				"gifs/housemarque_card.gif", 
-  				"", 
-  				"2001-2014",
-  				"",
-  				"I spent 13 years at <a href='https://housemarque.com/'>Housemarque</a> helping create titles such as Resogun, Outland, Dead Nation, Super Stardust Portable, Golf: Tee It Up, Furmins, Trader, Furry Dragons and many others");
-
-  			create_card(
-  				"NX Project", 
-  				"gifs/nx_card.gif", 
-  				"", 
-  				"2014",
-  				"game (not available) & <a href='https://vimeo.com/85078767'>video</a>",
-  				"NX project was an exploration into particle effects on low power devices.");
-
-  			create_card(
-  				"Cosmic Mechanic", 
-  				"gifs/cosmic_card.gif", 
-  				"", 
-  				"2013",
-  				"<a href='https://apps.apple.com/us/app/cosmic-mechanic/id606118389'>iPad</a>",
-  				"Cosmic Mechanic is a physics game about building vehicles and then driving them through various landscapes.");
-
-  			create_card(
-  				"Older Independent Work", 
-  				"gifs/older_work_card.gif", 
-  				"", 
-  				"pre-2012",
-  				"",
-  				"Earlier independent work includes games such as <a href='https://www.youtube.com/watch?v=EiUVoHqnMYg'>Puzzle Bonsai</a> (2012, iOS), <a href='https://www.youtube.com/watch?v=BEK1tZlXILE'>Pvt Littledude vs Robot Armada</a> (2011, Flash), <a href='https://www.youtube.com/watch?v=pnpME3AXG5U'>Fitting Pieces</a> (2009, Flash), Smilers (1999, Windows) ");
-
-  			create_card(
-  				"Various Game Jam Entries", 
-  				"gifs/gamejam_card.gif", 
-  				"", 
-  				"",
-  				"",
-  				"LD #46 - <a href='https://ldjam.com/events/ludum-dare/46/primed'>Primed</a> / Meditations - <a href='https://www.latimes.com/entertainment/music/la-et-hc-meditations-games-game-a-day-20190130-story.html'>Jan 13.</a> / LD #44 - <a href='https://ldjam.com/events/ludum-dare/44/victor-spumante-and-the-raindrops-of-burgundy'>Victor Spumante And The Raindrops of Burgundy</a> / MiniLD #28 - <a href='http://www.ludumdare.com/compo/minild-28/?action=preview&uid=78'>Pvt.Littledude vs Robot Armada</a> / LD #22 - <a href='http://www.ludumdare.com/compo/ludum-dare-22/?action=preview&uid=78'>Summit</a> / LD #21 - <a href='http://www.ludumdare.com/compo/ludum-dare-21/?action=preview&uid=78'>Dream Path</a> / LD #16 - <a href='http://www.ludumdare.com/compo/ludum-dare-16/?action=preview&uid=78'>Tree</a> / LD #15 - <a href='http://www.ludumdare.com/compo/ludum-dare-15/?action=preview&uid=78'>Collapse</a> / LD #10 - <a href='http://www.ludumdare.com/compo/2007/12/16/ms-greens-lovely-day-final/'>Ms Green's Lovely Day</a>");
-
-  	</script>
-
-  </div>
-<hr>
-</div>
+	ABOUT PAGE GOES HERE
 
 
-<a href="#" class="back-to-top align-items-center justify-content-center">Back to the top!</a>
-<p/>
+	<!-- Create the footer -->
+	<script>create_footer();</script>
 
 </body>
 </html>

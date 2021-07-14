@@ -1,49 +1,42 @@
 function create_header(current_page)
 {
-	let header_html = `
+	function add_menu_item(is_active, title, url)
+	{
+  	let html = "<div class='col-4 col-lg-2 col-sm-3 gbl-title-menu'>";
+
+  	if (is_active)
+  		html += `<i>${title}</i>`;
+  	else
+  		html += `<a href='${url}'>${title}</a>`;
+
+  	html += "</div>";
+
+  	return html;
+ 	}
+
+  let header = create_node(document.body, "div");
+
+	header.innerHTML = `
 	<div class="container-xxl pt-5">
 	  <div class="row">
 	 	  <p class="col gbl-title">Kimmo Lahtinen / gimblll</p>
    	</div>
 
 	  <div class="row justify-content-center px-5 pb-2">
-	`;
+	
+ 		${add_menu_item(current_page == 0, "WORK", "index.html")}
+ 		${add_menu_item(current_page == 1, "ABOUT", "about.html")}
 
-	function add_menu_item(is_active, title, url)
-	{
-  	header_html += "<div class='col-4 col-lg-2 col-sm-3 gbl-title-menu'>";
-
-  	if (is_active)
-  	{
-  		header_html += title;
-  	}
-  	else
-  	{
-  		header_html += "<a href='" + url + "'>" + title + "</a>";
-  	}
-
-  	header_html += "</div>";
- 	}
-
- 	add_menu_item(current_page == 0, "WORK", "index.html");
- 	add_menu_item(current_page == 1, "ABOUT", "about.html");
-
- 	header_html +=
-
-	`
   	 	<div class="col-4 col-lg-2 col-sm-3 gbl-title-menu">
 			  <div class="row justify-content-center">
 		  	 	<div class="col-2"><a href="mailto:gimblll@gmail.com"><i class="bi-envelope gbl-title-icon"></i></a></div>
-		  	 	<div class="col-2"><a href="https://twitter.com/gimblll"><i class="bi-twitter gbl-title-icon"></i></a></div>
-		  	 	<div class="col-2"><a href="https://fi.linkedin.com/in/kimmo-lahtinen-908612111"><i class="bi-linkedin gbl-title-icon"></i></a></div>
+		  	 	<div class="col-2"><a href="https://twitter.com/gimblll" target="_blank" rel="noopener noreferrer"><i class="bi-twitter gbl-title-icon"></i></a></div>
+		  	 	<div class="col-2"><a href="https://fi.linkedin.com/in/kimmo-lahtinen-908612111" target="_blank" rel="noopener noreferrer"><i class="bi-linkedin gbl-title-icon"></i></a></div>
 		 	 	</div>
    		</div>
   	</div>
   </div>
   `;
-
-  let header = create_node(document.body, "div");
-  header.innerHTML = header_html;
 }
 
 function create_footer()
