@@ -68,6 +68,12 @@ function create_text(parent, text, url)
 		parent.appendChild(link_text);
 }
 
+function create_image(parent, image_url, class_name)
+{
+	let i = create_node(parent, "img", class_name);
+	i.src = image_url;
+}
+
 function create_card(project_title, gif_id, project_url, year, platforms_html, description_html)
 {
 	let root = document.getElementById("card_container_indie");
