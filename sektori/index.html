@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Sektori</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Roboto:light">
+  <link rel="stylesheet" href="../style_new.css">
+
+  </head>
+
+<body>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- Our own helpers -->
+  <script src="../common.js"></script>
+
+  <noscript>JavaScript required.</noscript>
+
+  <!---------------------------------------------------------->
+
+<script>
+
+function make_section(parent_id, title, inner_html)
+{
+  let root = document.getElementById(parent_id);
+
+  // Create the entry
+  let div_row = create_node(root, "div", "row justify-content-center");
+  let div_column = create_node(div_row, "div", "col-12 col-md-7 p-0");
+
+  if (title)
+  {
+    let t_node = create_node(div_column, "h2", "p-2");
+    t_node.appendChild(document.createTextNode(title));
+  }
+
+  let content = create_node(div_column, "p");
+  content.innerHTML = inner_html;
+
+  return content;
+}
+
+</script>
+
+<div class="container-xxl p-5" id="root_container">
+
+  <script>
+    let section_top = make_section("root_container", "", "");
+    create_image(section_top, "logo_top.png", "img-thumbnail");
+
+    make_section("root_container", "About", 
+      `
+<p>Sektori is an intense, fast paced twin-stick shooter where every run is unique. Choose your upgrades carefully and create powerful builds to take on numerous enemies and epic bosses on a constantly evolving battlefield.</p>
+
+<p>Simple and pure gameplay. Quick runs. Learn the patterns, master the upgrades and most of all, have fun!</p>
+      `);
+
+    make_section("root_container", "Factsheet", 
+      `
+      <p><strong>Release Date: </strong>When it's done</p>
+      <p><strong>Platforms: </strong>Windows / ???</p>
+      <p><strong>Languages: </strong>English</p>
+      `);
+/*
+    make_section("root_container", "Store Links", 
+      `
+    <iframe src="http://store.steampowered.com/widget/1532520/" frameborder="0" width="520" height="220"></iframe>
+    <br>
+    <a href="https://apps.apple.com/us/app/day-repeat-day/id1553029497"><img src="../barbearian/download_app_store.png" width="180" alt=""/></a>
+      `);
+*/
+
+    make_section("root_container", "Screenshots", 
+      `
+    <img src="sektori_screenshot_2_4k.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    <img src="sektori_screenshot_3_4k.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    <img src="sektori_screenshot_4_4k.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    <img src="sektori_screenshot_5_4k.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    <img src="sektori_screenshot_6_4k.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    </p>
+      `);
+
+    make_section("root_container", "Developer", 
+      `
+    <p><a href="http://www.gimblll.com">Kimmo Lahtinen</a> / <a href="https://twitter.com/gimblll">@gimblll</a> - Design / Code / Art</p>
+    <p>Kimmo is an indie game developer who before has created games such as Day Repeat Day, Barbearian and Drift'n'Drive. Before his indie career, he spent a 13-years at Housemarque crafting top console titles such as Resogun, Outland and Dead Nation.</p>
+    <p><a href="https://www.facebook.com/pages/Tommy-Baynen/325801535849">Tommi Lahtinen</a> / <a href="https://twitter.com/TommyBaynen">@tommybaynen</a> - Music</p>
+    <p>Tommi is an experienced electronic music producer whose tracks have been played on worldwide stages by legendary DJs such as Above and Beyond, Armin van Buuren and Paul van Dyk.</p>
+      `);
+
+  </script>
+
+<!--
+  <p>&nbsp;</p>
+  <img src="icon.png" alt=""/>
+  <p>&nbsp;</p>
+-->
+</div>
+
+  <!---------------------------------------------------------->
+
+</body>
+</html>
