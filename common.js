@@ -22,7 +22,7 @@ function create_header(current_page)
 	 	  <p class="col gbl-title">Kimmo Lahtinen / gimblll</p>
    	</div>
 
-	  <div class="row justify-content-center px-5 pb-2">
+	  <div class="row justify-content-center px-4 pb-2">
 	
  		${add_menu_item(current_page == 0, "WORK", "index.html")}
  		${add_menu_item(current_page == 1, "ABOUT", "about.html")}
@@ -32,6 +32,7 @@ function create_header(current_page)
 		  	 	<div class="col-2"><a href="mailto:gimblll@gmail.com"><i class="bi-envelope gbl-title-icon"></i></a></div>
 		  	 	<div class="col-2"><a href="https://twitter.com/gimblll" target="_blank" rel="noopener noreferrer"><i class="bi-twitter gbl-title-icon"></i></a></div>
 		  	 	<div class="col-2"><a rel="me" href="https://mastodon.gamedev.place/@gimblll" target="_blank" rel="noopener noreferrer"><i class="bi-mastodon gbl-title-icon"></i></a></div>
+		  	 	<div class="col-2"><a rel="me" href="https://www.youtube.com/@gimblll" target="_blank" rel="noopener noreferrer"><i class="bi-youtube gbl-title-icon"></i></a></div>
 		  	 	<div class="col-2"><a href="https://fi.linkedin.com/in/kimmo-lahtinen-908612111" target="_blank" rel="noopener noreferrer"><i class="bi-linkedin gbl-title-icon"></i></a></div>
 		 	 	</div>
    		</div>
