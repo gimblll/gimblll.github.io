@@ -34,6 +34,7 @@ function create_header(current_page)
 		  	 	<div class="col-2"><a rel="me" href="https://mastodon.gamedev.place/@gimblll" target="_blank" rel="noopener noreferrer"><i class="bi-mastodon gbl-title-icon"></i></a></div>
 		  	 	<div class="col-2"><a rel="me" href="https://www.youtube.com/@gimblll" target="_blank" rel="noopener noreferrer"><i class="bi-youtube gbl-title-icon"></i></a></div>
 		  	 	<div class="col-2"><a href="https://fi.linkedin.com/in/kimmo-lahtinen-908612111" target="_blank" rel="noopener noreferrer"><i class="bi-linkedin gbl-title-icon"></i></a></div>
+		  	 	<div class="col-2"><a href="https://discord.gg/bhMDFyBEpV" target="_blank" rel="noopener noreferrer"><i class="bi-discord gbl-title-icon"></i></a></div>
 		 	 	</div>
    		</div>
   	</div>
