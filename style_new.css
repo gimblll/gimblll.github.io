@@ -2,8 +2,8 @@
 body {
 	font-size: 14px;
 	font-family: "Raleway", "Verdana", "Geneva", sans-serif;
-	background-color:#000000;
-	color: #888888;
+	background-color:#eeeeee;
+	color: #666666;
 	text-align: center;
 	margin: 0px;
 }
@@ -37,7 +37,7 @@ body {
 
 .gbl-title-icon {
 	font-size: 16px;
-	color: lightgray;
+	color: gray;
 	/*padding: 18px;*/
 }
 
@@ -60,6 +60,10 @@ body {
 
 .projectp {
 	padding:6px;
+}
+
+.about-content {
+	text-align: left;
 }
 
 a:link 				{ color:#FB8851; }

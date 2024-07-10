@@ -45,7 +45,7 @@ function create_header(current_page)
 function create_footer()
 {
   let x = document.createElement("div");
-  x.innerHTML = "<a href='#'' class='back-to-top align-items-center justify-content-center'>Back to the top!</a><p/>";
+  x.innerHTML = "<div class='row'><a href='#'' class='back-to-top align-items-center justify-content-center'>Back to the top!</a><p/></div>";
   document.body.appendChild(x);
 }
 
