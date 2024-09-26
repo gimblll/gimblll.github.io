@@ -2,151 +2,136 @@
 <html lang="en">
   <head>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <title>Sektori</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="../style_main.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Roboto:light">
-  <link rel="stylesheet" href="style_sektori.css">
+    <link rel="stylesheet" href="style_sektori.css">
 
   </head>
 
 <body>
 
-  <!-- Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <img src="sektori_logo_header.png" width ="600" alt="Sektori logo">
 
-  <!-- Our own helpers -->
-  <script src="../common.js"></script>
+  <!--------------------------------------------------------------------------->
 
-  <noscript>JavaScript required.</noscript>
+  <div id="introdiv">
 
-  <!---------------------------------------------------------->
+    <h1>About</h1>
 
-<script>
+    <p><b>THE GAME</b>
 
-function make_section(parent_id, title, inner_html)
-{
-  let root = document.getElementById(parent_id);
+    <p>Sektori is an intense, fast paced twin-stick shooter infused with hard hitting techno music. Choose your upgrades carefully and create powerful builds to take on the relentless enemies and epic bosses on a constantly evolving battlefield. Sektori is a game that requires your complete focus, a game where the high-adrenaline visuals, music, and gameplay come together to transport you into another state of consciousness. 
 
-  // Create the entry
-  let div_row = create_node(root, "div", "row justify-content-center");
-  let div_column = create_node(div_row, "div", "col-12 col-md-7 p-1");
+    <p>Simple, pure gameplay. Quick runs. Lots of challenge and replayability. 
 
-  if (title)
-  {
-    let t_node = create_node(div_column, "h3", "p-2");
-    t_node.appendChild(document.createTextNode(title));
-  }
+    <p><b>FEATURES</b>
 
-  let content = create_node(div_column, "p");
-  content.innerHTML = inner_html;
+    <p>
+    <ul>
+    <li> A five world campaign mode with dynamically changing levels and tons of enemy variation, including evolving bosses
+    <li> Alternate ships and configurable upgrade decks to mold your run with
+    <li> Difficulty modes suited for all players with a "Revolution" campaign mode for maximal challenge
+    <li> Arcade campaign option for retro purists
+    <li> Alternate game modes, like Surge, 80 gates and Classic
+    <li> Varied selection of challenges and achievements<br>
+    </ul>
 
-  return content;
-}
+    <p><b>DEVELOPER NOTES</b>
 
-</script>
+    <p>With Sektori I wanted to create a shoot'em up where every run feels familiar, but is still completely unique. A game of skill, not memorization. The hand crafted attack waves, levels and even the bosses are combined and randomized in a way that creates an interesting challenge for every run. The aestethics of the game are very much inspired by techno music. Fast, detailed, colorful, saturated, intense, aggressive. 
 
-<div class="container-xxl p-5" id="root_container">
+  </div>
 
-  <script>
-    let section_top = make_section("root_container", "", "");
-    create_image(section_top, "steam_library_logo.png", "img-fluid");
+  <!--------------------------------------------------------------------------->
 
-    make_section("root_container", "ABOUT", 
-      `
+  <div id="customdiv">
 
-      <p><b>THE GAME</b>
+    <h1>Factsheet</h1>
 
-<p>Sektori is an intense, fast paced twin-stick shooter infused with hard hitting techno music. Choose your upgrades carefully and create powerful builds to take on the relentless enemies and epic bosses on a constantly evolving battlefield. Sektori is a game that requires your complete focus, a game where the high-adrenaline visuals, music, and gameplay come together to transport you into another state of consciousness. 
+    <p><strong>Release Date: </strong>When it's done. (Currently targetting early 2025)</p>
+    <p><strong>Platforms: </strong>Windows / (others to be decided)</p>
+    <p><strong>Languages: </strong>English / (others to be decided)</p>
 
-<p>Simple, pure gameplay. Quick runs. Lots of challenge and replayability. 
+  </div>
 
-<p><b>FEATURES</b>
+  <!--------------------------------------------------------------------------->
 
-<p>
-<ul>
-<li> A five world campaign mode with dynamically changing levels and tons of enemy variation, including evolving bosses
-<li> Alternate ships and configurable upgrade decks to mold your run with
-<li> Difficulty modes suited for all players with a "Revolution" campaign mode for maximal challenge
-<li> Arcade campaign option for retro purists
-<li> Alternate game modes, like Surge, 80 gates and Classic
-<li> Varied selection of challenges and achievements<br>
-</ul>
+  <div id="customdiv">
 
-<p><b>DEVELOPER NOTES</b>
+    <h1>Store Links</h1>
 
-<p>With Sektori I wanted to create a shoot'em up where every run feels familiar, but is still completely unique. A game of skill, not memorization. The hand crafted attack waves, levels and even the bosses are combined and randomized in a way that creates an interesting challenge for every run. The aestethics of the game are very much inspired by techno music. Fast, detailed, colorful, saturated, intense, aggressive. 
-
-      `);
-
-    make_section("root_container", "FACTSHEET", 
-      `
-      <p><strong>Release Date: </strong>When it's done. (Currently targetting early 2025)</p>
-      <p><strong>Platforms: </strong>Windows / (others to be decided)</p>
-      <p><strong>Languages: </strong>English / (others to be decided)</p>
-      `);
-
-    make_section("root_container", "STORE LINKS", 
-      `
       <p><a href="https://store.steampowered.com/app/2105620/Sektori/">Steam</a></p>
       <iframe src="https://store.steampowered.com/widget/2105620/" frameborder="0" width="646" height="190"></iframe>
-      `);
 
-    make_section("root_container", "VIDEOS", 
-      `
-      <p><a href="https://www.dropbox.com/scl/fi/c7dxsfe5486vw9vrczu6w/sektori_trailer_1_final_2k_60fps.mp4?rlkey=gecvi5467uxrqtiatvr1xrech&dl=0">sektori_trailer_1_final_2k_60fps.mp4</a></p>
-      <iframe width="560" height="315" src="//www.youtube.com/embed/mjJHO4RIWhc" frameborder="0" allowfullscreen></iframe>
+  </div>
 
-      `
-      );
+  <!--------------------------------------------------------------------------->
 
-    make_section("root_container", "SCREENSHOTS", 
-      `
+  <div id="customdiv">
+
+    <h1>Videos</h1>
+
+    <p><a href="https://www.dropbox.com/scl/fi/c7dxsfe5486vw9vrczu6w/sektori_trailer_1_final_2k_60fps.mp4?rlkey=gecvi5467uxrqtiatvr1xrech&dl=0">sektori_trailer_1_final_2k_60fps.mp4</a></p>
+
+    <iframe width="560" height="315" src="//www.youtube.com/embed/mjJHO4RIWhc" frameborder="0" allowfullscreen></iframe>
+
+  </div>
+
+  <!--------------------------------------------------------------------------->
+
+  <div id="customdiv">
+
+    <h1>Screenshots</h1>
+
     <p><a href="https://www.dropbox.com/scl/fi/1r350i2iew226wdrjrg4d/SektoriScreenshots_feb2024.zip?rlkey=7z3bpr2a8kfs0m1f4mw3ob1lk&dl=0">SektoriScreenshots_feb2024.zip</a></p>
-    <img src="sektori_screenshot_basic_a_lowres.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
-    <img src="sektori_screenshot_basic_b_lowres.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
-    <img src="sektori_screenshot_basic_c_lowres.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
-    <img src="sektori_screenshot_basic_d_lowres.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
-    <img src="sektori_screenshot_basic_e_lowres.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
-    <img src="sektori_screenshot_basic_f_lowres.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
-    <img src="sektori_screenshot_boss_a_lowres.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
-    <img src="sektori_screenshot_boss_b_lowres.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
-    <img src="sektori_screenshot_upgrade_a_lowres.png" width="300" alt="" style="vertical-align:middle;margin:10px 10px"/>
+
+    <p>
+    <img src="sektori_screenshot_basic_a_lowres.png" width="270" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    <img src="sektori_screenshot_basic_b_lowres.png" width="270" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    <img src="sektori_screenshot_basic_c_lowres.png" width="270" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    <img src="sektori_screenshot_basic_d_lowres.png" width="270" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    <img src="sektori_screenshot_basic_e_lowres.png" width="270" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    <img src="sektori_screenshot_basic_f_lowres.png" width="270" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    <img src="sektori_screenshot_boss_a_lowres.png" width="270" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    <img src="sektori_screenshot_boss_b_lowres.png" width="270" alt="" style="vertical-align:middle;margin:10px 10px"/>
+    <img src="sektori_screenshot_upgrade_a_lowres.png" width="270" alt="" style="vertical-align:middle;margin:10px 10px"/>
     </p>
-      `
-      );
 
-    make_section("root_container", "PROMOTIONAL IMAGES", 
-      `
-      <p>Not yet available
-      `
-      );
+  </div>
 
-    make_section("root_container", "DEVELOPER", 
-      `
+  <!--------------------------------------------------------------------------->
+
+  <div id="customdiv">
+
+    <h1>Promotional images</h1>
+
+    <p>Not yet available
+
+  </div>
+
+  <!--------------------------------------------------------------------------->
+
+  <div id="infodiv">
+    
+    <h1>Developer</h1>
+
     <p><a href="http://www.gimblll.com">Kimmo Lahtinen</a> - Design / Code / Art</p>
     <p>Kimmo is an indie game developer who before has created games such as Day Repeat Day, Barbearian and Drift'n'Drive. Before his indie career, he spent 13 years at Housemarque crafting top console titles such as Resogun, Outland and Dead Nation.</p>
     <p><a href="https://www.facebook.com/pages/Tommy-Baynen/325801535849">Tommi Lahtinen</a> - Music</p>
     <p>Tommi is an experienced electronic music producer whose tracks have been played on worldwide stages by legendary DJs such as Above and Beyond, Armin van Buuren and Paul van Dyk.</p>
-      `);
 
-  </script>
+  </div>
+
+  <!--------------------------------------------------------------------------->
 
 <!--
   <p>&nbsp;</p>
   <img src="icon.png" alt=""/>
   <p>&nbsp;</p>
 -->
-</div>
-
-  <!---------------------------------------------------------->
 
 </body>
 </html>
