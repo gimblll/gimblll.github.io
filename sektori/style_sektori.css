@@ -1,0 +1,41 @@
+
+body {
+	font-size: 12px;
+	font-family: "Inconsolata", "Verdana", "Geneva", sans-serif;
+	color: #888888;
+	background-color:#1e1e1e;
+	text-align: center;
+	margin: 20px;
+
+	background-image:url("sektori_bg.png");
+   background-repeat: repeat-y;
+   background-position: center top;
+}
+
+canvas {
+	display : inline;
+}
+
+/*
+#innertext {
+	font-size: 20px;
+	font-family: "New Times Roman", serif;
+}
+*/
+
+h {
+
+}
+
+li {
+	text-align: left;
+	padding:0px 0px;
+	margin: 0px 30px;
+}
+
+a:link 				{ color:#FB8851; }
+a:visited 			{ color:#FB8851; }
+a:link:hover 		{ color:#ffffff; background-color:#777777; }
+a:link:active 		{ color:#ffffff; background-color:#777777; }
+a:visited:hover 	{ color:#ffffff; background-color:#777777; }
+a:visited:active 	{ color:#ffffff; background-color:#777777; }
