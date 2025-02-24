@@ -13,7 +13,7 @@ body {
 }
 
 #customdiv {
-	padding:2px 0px;
+	padding:2px 5px;
 	margin:auto; 
 	width:600px;
 	height:auto;
@@ -25,7 +25,7 @@ body {
 	height:auto;
 }
 #infodiv {
-	padding:10px 10px;
+	padding:20px 20px;
 	margin:auto; 
 	width:600px;
 	height:auto;
