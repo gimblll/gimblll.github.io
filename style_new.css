@@ -41,6 +41,17 @@ body {
 	/*padding: 18px;*/
 }
 
+.bi-bluesky::before {
+    content: "";
+    background-color: currentColor;
+    -webkit-mask: url("bluesky.svg") no-repeat 50% 50%;
+    mask: url("bluesky.svg") no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    height: 16px;
+    width: 16px;
+}
+
 .project-card {
 	margin: 12px;
 }
