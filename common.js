@@ -31,6 +31,7 @@ function create_header(current_page)
 			  <div class="row justify-content-center">
 		  	 	<div class="col-2"><a href="mailto:gimblll@gmail.com"><i class="bi-envelope gbl-title-icon"></i></a></div>
 		  	 	<div class="col-2"><a href="https://fi.linkedin.com/in/kimmo-lahtinen-908612111" target="_blank" rel="noopener noreferrer"><i class="bi-linkedin gbl-title-icon"></i></a></div>
+		  	 	<div class="col-2"><a href="https://bsky.app/profile/gimblll.com" target="_blank" rel="noopener noreferrer"><i class="bi-bluesky gbl-title-icon"></i></a></div>
 		 	 	</div>
    		</div>
   	</div>
